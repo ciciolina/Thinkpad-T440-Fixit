@@ -1,0 +1,46 @@
+This is the most time consuming think to do but with this guide you can solve it.
+
+first install thinkfan from AUR
+
+configure kernel module
+sudo echo "options thinkpad_acpi fan_control=1" | sudo tee /etc/modprobe.d/thinkfan.conf
+sudo modprobe -rv thinkpad_acpi
+sudo modprobe -v thinkpad_acpi
+
+reload kernel module
+modprobe thinkpad_acpi
+
+write my config in /etc/thinkpad.conf
+
+# I use this on my T61p:
+tp_fan /proc/acpi/ibm/fan
+tp_thermal /proc/acpi/ibm/thermal (0, 10, 15, 2, 10, 5, 0, 3)
+
+#tp_fan /proc/acpi/ibm/fan
+#hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp3_input
+#hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon4/temp1_input
+#hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon4/temp2_input
+#hwmon /sys/devices/virtual/hwmon/hwmon0/temp1_input
+
+(0,      0,     42)
+(1,     40,     47)
+(2,     45,     52)
+(3,     50,     57)
+(4,     55,     62)
+(5,     60,     67)
+(6,     65,     72)
+(7,     70,     77)
+(127,   75,     32767)
+
+
+Enable and start the service so it will be started automatically at every boot and drop privileges.
+root$ systemctl enable thinkfan
+root$ systemctl start thinkfan
+
+After reboot, check the service
+systemctl status thinkfan.service
+
+if this show any error be free to PM and i help you!
+
+
+After many try's i found this config works fine (silence fan and good temp) on my T440
