@@ -3,3 +3,9 @@ you can use grub customizer and go to general settings
 on kernel parameters add to the end "nowatchdog" without "" save and restart
 
 this fix the error notification at reboot and cut the time making this more faster.
+
+
+PD. if you have change your trackpad to a T450 model you NEED to put this line too:
+psmouse.synaptics_intertouch=0
+
+this fix the errors at reboot too
