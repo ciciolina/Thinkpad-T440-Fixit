@@ -1,0 +1,13 @@
+If you love flameshot (screenshot app), you will find you dont have a native config option to activate the app from Imp Pt key.
+Here you will find how to do it:
+
+Open System Settings
+Open Keyboard Settings (under Hardware)
+Select the 'Shortcuts' tab
+Under Categories open System > Screenshots and Recordings
+Check to which action the 'prtscr' key is bound (likely to Take a screenshot of an area or Take a screenshot... I had messed with this setting before, so I'm not quite sure)
+Open Custom Shortcuts
+Click Add custom shortcut
+Type 'Flameshot' in the Name field and 'flameshot gui' in the Command field (both without the enclosing apostrophies)
+Click Add
+Profit
