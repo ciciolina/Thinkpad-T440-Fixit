@@ -14,4 +14,4 @@ Here a index:
 - vmware issue with external wifi dongles
 - fix login keyring window on chromium/chrome
 
-And others tips and things i add in the future!
+And others tips and things i will add in the future!
