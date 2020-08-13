@@ -1,0 +1,5 @@
+when you install a new dongle (atheros or others) somethimes this adaptor dont work you need to add a user group and voila!
+
+$sudo usermod -a -G vboxusers $USER
+
+you need to change $USER with the name of your user.
