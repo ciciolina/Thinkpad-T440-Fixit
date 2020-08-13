@@ -1,0 +1,7 @@
+When you do a review of process (HTOP), you can find a process consume a lot of ram, this process are balooctl, this process control the index values and for 
+some reason this process run forever updating the index, its safe to disable.
+
+$ balooctl suspend
+$ balooctl disable
+
+its done!
