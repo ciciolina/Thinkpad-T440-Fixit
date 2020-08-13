@@ -1,0 +1,15 @@
+if you install mps-youtube you will find sometimes the app stop with a message of cache error or key error, you can fix it manually run this: 
+
+$rm ~/.config/mps-youtube/cache_py_*
+
+but i find this anoying and time waste for that reason i create a command you can put in your bash, always when you open terminal to run "mpsyt" the file its 
+deleted without intervention of the user, secure (yes more secure than use rm) and work always!
+
+you need to put this line on your bash file:
+
+find /home/c/.config/mps-youtube -type f -regextype posix-extended -iregex '.*\.(.?)$' -delete
+
+This baby search and found the cache file and delete, with this you will run mpsyt always without problems!
+
+how this works?
+the cache file of mpsyt its the unique file without a extencion .* this line found this file and delete in a secure form.
