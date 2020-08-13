@@ -1,0 +1,13 @@
+When you install chromium or chrome in your linux and opened a window jumps saying to enter the passw to unlock login keyring, 
+you can fix this without enter anything just go to:
+
+/usr/share/applications/Chromium.desktop
+
+open with sublime or nano and find this line:
+
+Exec=/usr/bin/chromium %U
+
+change it to this:
+Exec=/usr/bin/chromium --password-store=basic %U
+
+save and close!
