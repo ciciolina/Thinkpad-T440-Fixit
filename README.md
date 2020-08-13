@@ -8,7 +8,6 @@ Here a index:
 - trackpoint move alone fix/persistent
 - balooctl issue consume alot ram 
 - fix reboot alerts watchdog
-- tplconfig
 - trackpad fix speed/softness
 - imp Pt button call flameshot
 - mps-youtube fix cache/key
