@@ -14,5 +14,6 @@ Here a index:
 - vmware issue with external wifi dongles
 - fix login keyring window on chromium/chrome
 - fix powertop turnables/persistent
+- fix timeshift dont create sheduled snapshots
 
 And others tips and things i will add in the future!
