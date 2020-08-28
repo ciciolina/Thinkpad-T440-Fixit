@@ -1,0 +1,20 @@
+If you need tuning your powertop config you can notice this changes are not persistent, you need this mod on the powertop.service, 
+first add the --auto-tune value and to fix the "overlap" issue you need to add a "sleep" value.
+
+$sudo -s
+# nano /etc/systemd/system/powertop.service
+
+
+[Unit]
+Description=Powertop tunings
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 15
+ExecStart=/usr/bin/powertop --auto-tune
+
+[Install]
+WantedBy=multi-user.target
+
+save and profit!
+
