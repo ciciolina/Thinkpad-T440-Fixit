@@ -1,0 +1,14 @@
+after install timeshift and run the wizard config, you can notice the sheduled snapshots doesnt works, this is because the cron service its not enabled,
+you need to enable and verify it to fix this issue with timeshift, this lines make cronie persistent and run after reboot.
+
+$sudo -s
+#systemctl enable cronie.service
+#systemctl start cronie.service
+
+you can verify this service its running with this:
+#systemctl status cronie.service
+
+or this (recomended):
+journalctl -b -u cronie
+
+now its working, time to surf the internet!
