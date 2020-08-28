@@ -13,5 +13,6 @@ Here a index:
 - mps-youtube fix cache/key
 - vmware issue with external wifi dongles
 - fix login keyring window on chromium/chrome
+- fix powertop turnables/persistent
 
 And others tips and things i will add in the future!
