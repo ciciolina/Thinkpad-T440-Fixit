@@ -15,5 +15,6 @@ Here a index:
 - fix login keyring window on chromium/chrome
 - fix powertop turnables/persistent
 - fix timeshift dont create sheduled snapshots
+- fix high temps on video player and chromium
 
 And others tips and things i will add in the future!
