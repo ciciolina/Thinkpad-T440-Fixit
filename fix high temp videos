@@ -1,0 +1,12 @@
+This config comes with thinkfan, this fix some termal issues when you play videos on some players or browsers, dont mind if this show 
+error on .xml file, this systemd config works without the .xml file!
+
+$sudo systemctl stop thermald
+
+$sudo sensors-detect
+
+$sudo systemctl enable thermald
+
+$sudo systemctl start thermald
+
+now you can restart and enjoy -5 grades on video play! 
