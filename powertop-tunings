@@ -16,5 +16,7 @@ ExecStart=/usr/bin/powertop --auto-tune
 [Install]
 WantedBy=multi-user.target
 
+Pd. Remember run powertop --calibrate allways after change tpl or something related to the batteries, and run without power supply.
+
 save and profit!
 
