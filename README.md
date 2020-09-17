@@ -17,5 +17,6 @@ Here a index:
 - fix timeshift dont create sheduled snapshots
 - fix high temps on video player and chromium
 - fix straw-viewer High temp and use of CPU
+- variety shortcut next wallpaper
 
 And others tips and things i will add in the future!
