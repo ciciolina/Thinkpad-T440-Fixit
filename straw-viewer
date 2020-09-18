@@ -1,7 +1,4 @@
-I found this issue after install the application and run a video from youtube, 
-my CPU consume more power and the temp jumps from 44-50c to 66-69c, 
-im pretty sure its the resolution of the video and after look 
-straw-viewer --tricks i found the config file: /home/c/.config/straw-viewer/straw-viewer.conf 
-make a $sudo nano and search for the resolution line and found it resolution => "best", 
-after change "best" to "720px" and save the change my CPU and temp issue was solved.
+I found this issue after install the application and run a video from youtube, my CPU consume more power and the temp jumps from 44-50c to 66-69c, 
+im pretty sure its the resolution of the video and after look straw-viewer --tricks i found the config file: /home/c/.config/straw-viewer/straw-viewer.conf 
+make a $sudo nano and search for the resolution line and found it resolution => "best", after change "best" to "720px" and save the change my CPU and temp issue was solved.
 Also setting hfr => 0, will help with slow GPUs when resolution is set to 1080p or higher.
