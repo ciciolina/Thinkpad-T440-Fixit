@@ -1,0 +1,70 @@
+I dont know why but linux have a active acceleration value and sucks! here you will find how fix this mess easy and peace!
+first you need to find the ID # of the trackpoint for that you can run this command on terminal:
+
+$ xinput list
+
+now you will see the list of devices, found this, the # id can change:
+
+↳ TPPS/2 IBM TrackPoint                   	id=12
+
+in my laptop its #12
+
+
+now we need to see the predefinied values of the trackpoint and their # values to change it, in this case disable it, run this:
+
+xinput list-props 12
+
+
+now you will see something like this:
+
+Device 'TPPS/2 IBM TrackPoint':
+	Device Enabled (166):	1
+	Coordinate Transformation Matrix (168):	1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000
+	libinput Natural Scrolling Enabled (336):	0
+	libinput Natural Scrolling Enabled Default (337):	0
+	libinput Scroll Methods Available (338):	0, 0, 1
+	libinput Scroll Method Enabled (339):	0, 0, 1
+	libinput Scroll Method Enabled Default (340):	0, 0, 1
+	libinput Button Scrolling Button (341):	2
+	libinput Button Scrolling Button Default (342):	2
+	libinput Button Scrolling Button Lock Enabled (343):	0
+	libinput Button Scrolling Button Lock Enabled Default (344):	0
+	libinput Middle Emulation Enabled (345):	0
+	libinput Middle Emulation Enabled Default (346):	0
+	libinput Accel Speed (347):	-0.140000
+	libinput Accel Speed Default (348):	0.000000
+	libinput Accel Profiles Available (349):	1, 1
+	libinput Accel Profile Enabled (350):	1, 0
+	libinput Accel Profile Enabled Default (351):	1, 0
+	libinput Left Handed Enabled (352):	0
+	libinput Left Handed Enabled Default (353):	0
+	libinput Send Events Modes Available (286):	1, 0
+	libinput Send Events Mode Enabled (287):	0, 0
+	libinput Send Events Mode Enabled Default (288):	0, 0
+	Device Node (289):	"/dev/input/event19"
+	Device Product ID (290):	2, 10
+	libinput Drag Lock Buttons (354):	<no items>
+	libinput Horizontal Scroll Enabled (355):	1
+
+
+Now we need to change two of these values, remember the # id on each one:
+
+libinput Accel Speed (347)
+libinput Accel Speed Default (348)
+
+
+these values are 347 and 348 now we need to diseble it change it the values with this on terminal:
+
+xinput set-prop 12 347 -1
+xinput set-prop 12 348 0 1
+
+
+To make the change persist after restart simply add the config line it to your ~/.xsessionrc file, e.g.:
+
+echo "xinput set-prop 12 317 0 1" >> ~/.xsessionrc
+
+
+
+
+
+
