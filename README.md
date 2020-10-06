@@ -18,5 +18,6 @@ Here a index:
 - fix high temps on video player and chromium
 - fix straw-viewer High temp and use of CPU
 - variety shortcut next wallpaper
+- fix trackpoint speed/fix acceleration
 
 And others tips and things i will add in the future!
