@@ -10,7 +10,7 @@ sudo modprobe -v thinkpad_acpi
 reload kernel module
 modprobe thinkpad_acpi
 
-write my config in /etc/thinkpad.conf
+write my config in /etc/thinkfan.conf
 
 # I use this on my T61p:
 tp_fan /proc/acpi/ibm/fan
