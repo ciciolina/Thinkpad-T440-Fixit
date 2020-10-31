@@ -1,0 +1,30 @@
+After read the add campain and disturbing anti-privacy practices of the creators (or more buyer bussines), i search to disable the popup message when you run
+the spyder app on anaconda (yes allways open when you started, why? bacause they PAY $$$ to spyder dev), ok no more rant about it you can edit spyder code
+to disable this shit:
+
+locate spyder or simply go to this route:
+/home/YOUR_USER/anaconda3/pkgs/spyder-4.1.5-py38_0/lib/python3.8/site-packages/spyder/config/main.py
+
+find kite or line 525 more exactly:
+'kite'
+
+or look this image for reference:
+https://i.imgur.com/EE4kRcU.png
+
+change ALL to False... you can see this image for reference or this code too:
+https://i.imgur.com/7PcwwQ7.png
+
+code: 
+            ('kite',
+             {
+              'enable': False,
+              'call_to_action': False,
+              # Enable the installation dialog
+              'show_installation_dialog': False,
+              'show_onboarding': False,
+              'show_installation_error_message': False,
+             }),
+            ]
+            
+            
+now you are free to use spyder without bloatware!!!
