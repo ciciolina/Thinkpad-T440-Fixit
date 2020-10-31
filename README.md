@@ -19,5 +19,6 @@ Here a index:
 - fix straw-viewer High temp and use of CPU
 - variety shortcut next wallpaper
 - fix trackpoint speed/fix acceleration
+- disable kite install popup on spyder anaconda
 
 And others tips and things i will add in the future!
